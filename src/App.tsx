@@ -5,6 +5,7 @@ import { AuthLayout } from "@/layouts/AuthLayout";
 
 import { HomePage } from "@/pages/HomePage";
 import { RegisterPage } from "@/pages/RegisterPage";
+import { LoginPage } from "@/pages/LoginPage";
 
 function App() {
     return (
@@ -21,6 +22,11 @@ function App() {
                     <Route
                         path="/kayit"
                         element={<RegisterPage />}
+                    />
+
+                    <Route
+                        path="/giris"
+                        element={<LoginPage />}
                     />
                 </Route>
             </Routes>

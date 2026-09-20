@@ -2,12 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
     "\\src\\features",
     "\\src\\features\\auth",
     "\\src\\features\\auth\\components",
     "\\src\\features\\home",
     "\\src\\pages"
   ],
+  "SelectedNode": "\\src\\features\\auth\\components\\LoginForm.tsx",
   "PreviewInSolutionExplorer": false
 }
