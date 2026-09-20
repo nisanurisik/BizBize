@@ -40,7 +40,7 @@ export function Header() {
                 </nav>
 
                 <AppLink
-                    to="/giris"
+                    to="/kayit"
                     variant="primaryButton"
                 >
                     Hemen Başla

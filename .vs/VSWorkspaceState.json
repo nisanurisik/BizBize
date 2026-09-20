@@ -2,16 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets",
-    "\\src\\assets\\images",
-    "\\src\\assets\\images\\home",
     "\\src\\components",
-    "\\src\\components\\common",
-    "\\src\\components\\ui",
     "\\src\\features",
+    "\\src\\features\\auth",
+    "\\src\\features\\auth\\components",
     "\\src\\features\\home",
-    "\\src\\features\\home\\components"
+    "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\assets\\images\\home",
   "PreviewInSolutionExplorer": false
 }
