@@ -16,6 +16,7 @@ import { DashboardHomePage } from "@/pages/DashboardHomePage";
 import { GamesPage } from "@/pages/GamesPage";
 import { GameQuestionPage } from "@/pages/GameQuestionPage";
 import { GameResultPage } from "@/pages/GameResultPage";
+import { ProfilePage } from "@/pages/ProfilePage";
 
 function App() {
     return (
@@ -64,6 +65,11 @@ function App() {
                     <Route
                         path="/oyunlar/sonuc"
                         element={<GameResultPage />}
+                    />
+
+                    <Route
+                        path="/profil"
+                        element={<ProfilePage />}
                     />
                 </Route>
             </Routes>
