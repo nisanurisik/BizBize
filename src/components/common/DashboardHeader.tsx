@@ -36,9 +36,9 @@ export function DashboardHeader() {
                             to={item.path}
                             className={({ isActive }) =>
                                 [
-                                    "text-[14px] font-semibold transition",
+                                    "relative flex h-[74px] items-center text-[14px] font-semibold transition",
                                     isActive
-                                        ? "text-primary"
+                                        ? "text-primary after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:rounded-full after:bg-primary"
                                         : "text-[#625b72] hover:text-primary",
                                 ].join(" ")
                             }

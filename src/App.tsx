@@ -12,6 +12,7 @@ import { HomePage } from "@/pages/HomePage";
 import { RegisterPage } from "@/pages/RegisterPage";
 import { LoginPage } from "@/pages/LoginPage";
 import { CoupleSetupPage } from "@/pages/CoupleSetupPage";
+import { DashboardHomePage } from "@/pages/DashboardHomePage";
 
 function App() {
     return (
@@ -39,6 +40,11 @@ function App() {
                 <Route element={<DashboardLayout />}>
                     <Route
                         path="/panel"
+                        element={<DashboardHomePage />}
+                    />
+
+                    <Route
+                        path="/eslesme"
                         element={<CoupleSetupPage />}
                     />
                 </Route>

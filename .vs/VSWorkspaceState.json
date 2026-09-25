@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\components\\common",
     "\\src\\features",
+    "\\src\\features\\dashboard",
+    "\\src\\features\\dashboard\\components",
     "\\src\\pages"
   ],
+  "SelectedNode": "\\src\\features\\dashboard\\components\\DashboardQuote.tsx",
   "PreviewInSolutionExplorer": false
 }
