@@ -13,6 +13,7 @@ import { RegisterPage } from "@/pages/RegisterPage";
 import { LoginPage } from "@/pages/LoginPage";
 import { CoupleSetupPage } from "@/pages/CoupleSetupPage";
 import { DashboardHomePage } from "@/pages/DashboardHomePage";
+import { GamesPage } from "@/pages/GamesPage";
 
 function App() {
     return (
@@ -46,6 +47,11 @@ function App() {
                     <Route
                         path="/eslesme"
                         element={<CoupleSetupPage />}
+                    />
+
+                    <Route
+                        path="/oyunlar"
+                        element={<GamesPage />}
                     />
                 </Route>
             </Routes>
