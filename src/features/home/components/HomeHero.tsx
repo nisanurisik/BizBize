@@ -2,18 +2,18 @@
 
 import coupleHeroImage from "@/assets/images/home/couple-hero.png";
 
-import { AppButton } from "@/components/ui/AppButton";
 import { AppContainer } from "@/components/ui/AppContainer";
+import { AppLink } from "@/components/ui/AppLink";
 import { AppText } from "@/components/ui/AppText";
 
 export function HomeHero() {
     return (
-        <section className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-page">
+        <section className="relative h-[calc(100vh-88px)] min-h-0 overflow-hidden bg-page">
             <div className="absolute left-[-120px] top-20 h-72 w-72 rounded-full bg-pink-200/20 blur-3xl" />
 
             <div className="absolute right-[-80px] top-10 h-80 w-80 rounded-full bg-violet-200/20 blur-3xl" />
 
-            <AppContainer className="relative grid min-h-[calc(100vh-80px)] items-center gap-10 py-14 lg:grid-cols-2 lg:py-10">
+            <AppContainer className="relative grid h-full min-h-0 items-center gap-8 py-6 lg:grid-cols-2 lg:py-4">
                 <div className="relative z-10 max-w-2xl">
                     <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-2 text-sm font-semibold text-secondary">
                         <Heart
@@ -29,6 +29,7 @@ export function HomeHero() {
                         variant="hero"
                     >
                         Birbirinizi daha
+
                         <span className="block text-primary">
                             iyi keşfedin
                         </span>
@@ -41,12 +42,15 @@ export function HomeHero() {
                     </AppText>
 
                     <div className="mt-8 flex flex-wrap items-center gap-4">
-                        <AppButton>
+                        <AppLink
+                            to="/kayit"
+                            variant="primaryButton"
+                        >
                             Hemen Başla
-                        </AppButton>
+                        </AppLink>
                     </div>
 
-                    <div className="mt-14 -rotate-6 text-secondary">
+                    <div className="mt-9 -rotate-6 text-secondary">
                         <p className="font-medium italic">
                             Birbirinizi ne kadar
                         </p>
@@ -82,7 +86,7 @@ export function HomeHero() {
                     <img
                         src={coupleHeroImage}
                         alt="Birlikte oyun oynayan çift"
-                        className="relative z-10 w-full max-w-[560px] object-contain lg:max-w-[650px]"
+                        className="relative z-10 max-h-[calc(100vh-125px)] w-full max-w-[590px] object-contain lg:max-w-[610px]"
                     />
 
                     <div className="absolute bottom-[-160px] right-[-100px] h-96 w-96 rounded-full bg-pink-300/20 blur-3xl" />

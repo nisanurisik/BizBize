@@ -10,6 +10,7 @@ type AppLinkProps = {
     to: string;
     children: ReactNode;
     variant?: AppLinkVariant;
+    className?: string;
 };
 
 const variantClasses: Record<AppLinkVariant, string> = {
@@ -27,6 +28,7 @@ export function AppLink({
     to,
     children,
     variant = "default",
+    className = "",
 }: AppLinkProps) {
     if (variant === "nav") {
         return (
@@ -34,7 +36,7 @@ export function AppLink({
                 to={to}
                 className={({ isActive }) =>
                     `${variantClasses.nav} ${isActive ? "text-primary" : ""
-                    }`
+                    } ${className}`
                 }
             >
                 {children}
@@ -45,7 +47,7 @@ export function AppLink({
     return (
         <Link
             to={to}
-            className={variantClasses[variant]}
+            className={`${variantClasses[variant]} ${className}`}
         >
             {children}
         </Link>
