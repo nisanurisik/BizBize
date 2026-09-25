@@ -1,95 +1,327 @@
-﻿import { Heart } from "lucide-react";
+﻿import {
+    ArrowRight,
+    Heart,
+} from "lucide-react";
+
+import { Link } from "react-router-dom";
 
 import coupleHeroImage from "@/assets/images/home/couple-hero.png";
 
 import { AppContainer } from "@/components/ui/AppContainer";
-import { AppLink } from "@/components/ui/AppLink";
-import { AppText } from "@/components/ui/AppText";
 
 export function HomeHero() {
     return (
-        <section className="relative h-[calc(100vh-88px)] min-h-0 overflow-hidden bg-page">
-            <div className="absolute left-[-120px] top-20 h-72 w-72 rounded-full bg-pink-200/20 blur-3xl" />
+        <section className="relative h-full overflow-hidden bg-white">
+            {/* Arka plan dekorları */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                <div
+                    className="
+                        absolute
+                        right-[6%]
+                        top-[8%]
+                        h-[54%]
+                        w-[45%]
+                        rounded-[45%]
+                        bg-[#f8f4ff]
+                    "
+                />
 
-            <div className="absolute right-[-80px] top-10 h-80 w-80 rounded-full bg-violet-200/20 blur-3xl" />
+                <div
+                    className="
+                        absolute
+                        bottom-[-12%]
+                        right-[8%]
+                        h-[35%]
+                        w-[46%]
+                        rounded-[50%]
+                        bg-[#fff4f3]
+                    "
+                />
+            </div>
 
-            <AppContainer className="relative grid h-full min-h-0 items-center gap-8 py-6 lg:grid-cols-2 lg:py-4">
-                <div className="relative z-10 max-w-2xl">
-                    <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-2 text-sm font-semibold text-secondary">
-                        <Heart
-                            size={17}
-                            fill="currentColor"
-                        />
-
-                        Sadece ikinize özel
-                    </div>
-
-                    <AppText
-                        as="h1"
-                        variant="hero"
+            <AppContainer
+                className="
+                    relative
+                    grid
+                    h-full
+                    grid-cols-[45%_55%]
+                    items-stretch
+                    gap-0
+                "
+            >
+                {/* SOL TARAF */}
+                <div
+                    className="
+                        relative
+                        z-20
+                        flex
+                        h-full
+                        min-h-0
+                        flex-col
+                        justify-between
+                        py-8
+                    "
+                >
+                    {/* ÜST ALAN */}
+                    <div
+                        className="
+                            flex
+                            flex-1
+                            items-center
+                        "
                     >
-                        Birbirinizi daha
+                        <div className="flex flex-col gap-5">
+                            {/* ANA BAŞLIK */}
+                            <h1
+                                className="
+                                    flex
+                                    max-w-[600px]
+                                    flex-col
+                                    gap-1
+                                    text-[clamp(40px,3.9vw,60px)]
+                                    font-black
+                                    leading-[1.08]
+                                    tracking-[-0.04em]
+                                    text-[#080650]
+                                "
+                            >
+                                <span className="block whitespace-nowrap">
+                                    Birbirinizi daha
+                                </span>
 
-                        <span className="block text-primary">
-                            iyi keşfedin
-                        </span>
-                    </AppText>
+                                <span
+                                    className="
+                                        flex
+                                        items-center
+                                        whitespace-nowrap
+                                    "
+                                >
+                                    <span>
+                                        iyi{" "}
+                                        <span
+                                            className="
+                                                bg-gradient-to-r
+                                                from-[#7755ff]
+                                                to-[#5e44eb]
+                                                bg-clip-text
+                                                text-transparent
+                                            "
+                                        >
+                                            keşfedin
+                                        </span>
+                                    </span>
 
-                    <AppText className="mt-6 max-w-xl">
-                        Eğlenceli sorular, küçük meydan okumalar ve birlikte
-                        geçirdiğiniz zamanı daha keyifli hale getiren çift
-                        oyunlarıyla birbirinizi yeniden keşfedin.
-                    </AppText>
+                                    <Heart
+                                        className="
+                                            ml-4
+                                            h-[clamp(30px,2.9vw,42px)]
+                                            w-[clamp(30px,2.9vw,42px)]
+                                            shrink-0
+                                            text-[#ff72a4]
+                                        "
+                                        fill="currentColor"
+                                        strokeWidth={0}
+                                    />
+                                </span>
+                            </h1>
 
-                    <div className="mt-8 flex flex-wrap items-center gap-4">
-                        <AppLink
-                            to="/kayit"
-                            variant="primaryButton"
-                        >
-                            Hemen Başla
-                        </AppLink>
+                            {/* AÇIKLAMA */}
+                            <p
+                                className="
+                                    max-w-[560px]
+                                    text-[clamp(15px,1.25vw,19px)]
+                                    leading-[1.6]
+                                    text-[#211c56]
+                                "
+                            >
+                                Eğlenceli sorular, anlamlı sohbetler ve daha güçlü
+                                bir bağ için BizBize yanınızda.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="mt-9 -rotate-6 text-secondary">
-                        <p className="font-medium italic">
-                            Birbirinizi ne kadar
-                        </p>
+                    {/* ALT ALAN */}
+                    <div
+                        className="
+                            flex
+                            shrink-0
+                            flex-col
+                            items-start
+                            gap-7
+                        "
+                    >
+                        {/* HEMEN BAŞLA */}
+                        <Link
+                            to="/kayit"
+                            style={{
+                                color: "#ffffff",
+                            }}
+                            className="
+                                group
+                                inline-flex
+                                h-[56px]
+                                min-w-[275px]
+                                items-center
+                                justify-center
+                                gap-7
+                                rounded-[20px]
+                                bg-gradient-to-r
+                                from-[#6e4cf5]
+                                to-[#764ef4]
+                                px-8
+                                text-[17px]
+                                font-semibold
+                                shadow-[0_13px_28px_rgba(109,74,255,0.2)]
+                                transition-all
+                                duration-200
+                                hover:-translate-y-0.5
+                                hover:shadow-[0_16px_32px_rgba(109,74,255,0.26)]
+                            "
+                        >
+                            <span className="text-white">
+                                Hemen Başla
+                            </span>
 
-                        <p className="font-medium italic">
-                            iyi tanıyorsunuz? ♡
-                        </p>
+                            <ArrowRight
+                                size={22}
+                                strokeWidth={2}
+                                className="
+                                    shrink-0
+                                    text-white
+                                    transition-transform
+                                    duration-200
+                                    group-hover:translate-x-1
+                                "
+                            />
+                        </Link>
+
+                        {/* SOL ALT EL YAZISI */}
+                        <div
+                            className="
+                                w-fit
+                                -rotate-[5deg]
+                                text-[#7050ef]
+                            "
+                            style={{
+                                fontFamily:
+                                    '"Segoe Print", "Comic Sans MS", cursive',
+                            }}
+                        >
+                            <p
+                                className="
+                                    text-[clamp(17px,1.45vw,21px)]
+                                    leading-[1.1]
+                                "
+                            >
+                                Daha fazla
+                            </p>
+
+                            <p
+                                className="
+                                    ml-3
+                                    text-[clamp(17px,1.45vw,21px)]
+                                    leading-[1.1]
+                                "
+                            >
+                                soru, daha fazla biz{" "}
+                                <span className="text-[#ff71aa]">
+                                    ♡
+                                </span>
+                            </p>
+
+                            <div
+                                className="
+                                    ml-12
+                                    mt-2
+                                    h-[3px]
+                                    w-[105px]
+                                    -rotate-[7deg]
+                                    rounded-full
+                                    bg-[#ff6ca1]
+                                "
+                            />
+                        </div>
                     </div>
                 </div>
 
-                <div className="relative flex items-end justify-center self-end lg:justify-end">
-                    <div className="absolute left-0 top-16 rotate-[-9deg] text-center text-primary/70 lg:left-8">
-                        <p className="text-lg font-medium italic">
-                            Aynı cevap mı?
+                {/* SAĞ TARAF */}
+                <div
+                    className="
+                        relative
+                        z-10
+                        h-full
+                        min-w-0
+                    "
+                >
+                    {/* ÜST EL YAZISI */}
+                    <div
+                        className="
+                            absolute
+                            left-[17%]
+                            top-[8%]
+                            z-20
+                            -rotate-[7deg]
+                            text-[#7653ef]
+                        "
+                        style={{
+                            fontFamily:
+                                '"Segoe Print", "Comic Sans MS", cursive',
+                        }}
+                    >
+                        <p
+                            className="
+                                text-[clamp(19px,1.8vw,26px)]
+                                leading-[1.08]
+                            "
+                        >
+                            Aynı sorular
                         </p>
 
-                        <p className="text-lg font-medium italic">
-                            Yoksa sürpriz mi?
+                        <p
+                            className="
+                                text-[clamp(19px,1.8vw,26px)]
+                                leading-[1.08]
+                            "
+                        >
+                            Daha güçlü biz
                         </p>
 
-                        <span className="mt-2 block text-2xl">
+                        <p className="mt-1 text-center text-[21px] leading-none">
                             ♡
-                        </span>
+                        </p>
                     </div>
 
-                    <div className="absolute right-4 top-14 text-secondary/50">
-                        <Heart
-                            size={26}
-                            strokeWidth={1.5}
-                        />
-                    </div>
-
-                    <img
-                        src={coupleHeroImage}
-                        alt="Birlikte oyun oynayan çift"
-                        className="relative z-10 max-h-[calc(100vh-125px)] w-full max-w-[590px] object-contain lg:max-w-[610px]"
+                    {/* SAĞ ÜST BÜYÜK KALP */}
+                    <Heart
+                        className="
+                            absolute
+                            right-[8%]
+                            top-[9%]
+                            h-[clamp(65px,6vw,90px)]
+                            w-[clamp(65px,6vw,90px)]
+                            rotate-[10deg]
+                            text-[#f5bfd8]
+                        "
+                        fill="currentColor"
+                        strokeWidth={0}
                     />
 
-                    <div className="absolute bottom-[-160px] right-[-100px] h-96 w-96 rounded-full bg-pink-300/20 blur-3xl" />
+                    {/* ÇİFT GÖRSELİ */}
+                    <img
+                        src={coupleHeroImage}
+                        alt="Birbirine bakan çift"
+                        className="
+                            absolute
+                            bottom-0
+                            right-0
+                            z-10
+                            h-[78%]
+                            w-auto
+                            max-w-none
+                            object-contain
+                            object-bottom
+                        "
+                    />
                 </div>
             </AppContainer>
         </section>

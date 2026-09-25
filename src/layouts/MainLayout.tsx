@@ -4,10 +4,10 @@ import { Header } from "@/components/common/Header";
 
 export function MainLayout() {
     return (
-        <div className="min-h-screen bg-page">
+        <div className="h-screen overflow-hidden bg-white">
             <Header />
 
-            <main>
+            <main className="h-[calc(100vh-84px)] overflow-hidden">
                 <Outlet />
             </main>
         </div>
