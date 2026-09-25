@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\features\\dashboard",
-    "\\src\\features\\dashboard\\components",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\App.tsx",
+  "SelectedNode": "\\src\\pages\\GameQuestionPage.tsx",
   "PreviewInSolutionExplorer": false
 }

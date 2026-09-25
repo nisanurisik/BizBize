@@ -14,11 +14,13 @@ import { LoginPage } from "@/pages/LoginPage";
 import { CoupleSetupPage } from "@/pages/CoupleSetupPage";
 import { DashboardHomePage } from "@/pages/DashboardHomePage";
 import { GamesPage } from "@/pages/GamesPage";
+import { GameQuestionPage } from "@/pages/GameQuestionPage";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
+                {/* Genel sayfalar */}
                 <Route element={<MainLayout />}>
                     <Route
                         path="/"
@@ -26,6 +28,7 @@ function App() {
                     />
                 </Route>
 
+                {/* Giriþ / Kayýt sayfalarý */}
                 <Route element={<AuthLayout />}>
                     <Route
                         path="/kayit"
@@ -38,6 +41,7 @@ function App() {
                     />
                 </Route>
 
+                {/* Kullanýcý paneli */}
                 <Route element={<DashboardLayout />}>
                     <Route
                         path="/panel"
@@ -52,6 +56,11 @@ function App() {
                     <Route
                         path="/oyunlar"
                         element={<GamesPage />}
+                    />
+
+                    <Route
+                        path="/oyunlar/birbirimizi-taniyalim"
+                        element={<GameQuestionPage />}
                     />
                 </Route>
             </Routes>
