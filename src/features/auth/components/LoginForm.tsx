@@ -24,9 +24,9 @@ export function LoginForm() {
                     Giriş Yap
                 </h1>
 
-                <p className="mx-auto mt-2 max-w-[330px] text-[15px] leading-6 text-[#8a8498]">
+                <p className="mt-2 w-full text-center text-[15px] leading-6 text-[#8a8498]">
                     Kendi hesabına giriş yaparak kaldığın
-                    <br className="hidden sm:block" />
+                    <br />
                     yerden devam et.
                 </p>
             </div>
@@ -68,7 +68,9 @@ export function LoginForm() {
 
                     <button
                         type="button"
-                        onClick={() => setShowPassword((value) => !value)}
+                        onClick={() =>
+                            setShowPassword((value) => !value)
+                        }
                         aria-label={
                             showPassword
                                 ? "Parolayı gizle"
@@ -126,13 +128,13 @@ export function LoginForm() {
 
                 <button
                     type="submit"
-                    className="mt-3 flex h-[53px] w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#8b3ce7] to-[#6746dc] text-[15px] font-bold text-white shadow-[0_12px_28px_rgba(112,67,218,0.22)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(112,67,218,0.28)] active:translate-y-0"
+                    className="mt-3 flex h-[53px] w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#f4539a] to-[#b33cda] text-[15px] font-bold text-white shadow-[0_12px_28px_rgba(218,74,157,0.22)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(218,74,157,0.28)] active:translate-y-0"
                 >
                     Giriş Yap
                 </button>
             </form>
 
-            <p className="mt-6 text-center text-[14px] font-medium text-[#6f687d]">
+            <p className="mt-8 text-center text-[14px] font-medium text-[#6f687d]">
                 Hesabın yok mu?{" "}
                 <Link
                     to="/kayit"

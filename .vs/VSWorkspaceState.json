@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
     "\\src\\features",
-    "\\src\\features\\home",
-    "\\src\\features\\home\\components"
+    "\\src\\features\\home\\components",
+    "\\src\\features\\how-it-works",
+    "\\src\\features\\how-it-works\\components",
+    "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\index.css",
+  "SelectedNode": "\\src\\App.tsx",
   "PreviewInSolutionExplorer": false
 }

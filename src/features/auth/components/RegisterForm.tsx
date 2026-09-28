@@ -24,11 +24,13 @@ export function RegisterForm() {
                     Hesap Oluştur
                 </h1>
 
-                <p className="mx-auto mt-2 max-w-[310px] text-[15px] leading-6 text-[#8a8498]">
-                    Eğlenceli yolculuğunuza başlamak için
-                    <br className="hidden sm:block" />
-                    birkaç bilgi yeterli.
-                </p>
+                <div className="mt-2 flex justify-center">
+                    <p className="max-w-[310px] text-center text-[15px] leading-6 text-[#8a8498]">
+                        Eğlenceli yolculuğunuza başlamak için
+                        <br className="hidden sm:block" />
+                        birkaç bilgi yeterli.
+                    </p>
+                </div>
             </div>
 
             <form
@@ -100,13 +102,15 @@ export function RegisterForm() {
 
                     <button
                         type="button"
-                        onClick={() => setShowPassword((value) => !value)}
+                        onClick={() =>
+                            setShowPassword((value) => !value)
+                        }
                         aria-label={
                             showPassword
                                 ? "Parolayı gizle"
                                 : "Parolayı göster"
                         }
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-[#aaa5b7] transition hover:text-primary"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-[#aaa5b7] transition hover:text-[#f4539a]"
                     >
                         {showPassword ? (
                             <EyeOff size={18} />
@@ -118,17 +122,17 @@ export function RegisterForm() {
 
                 <button
                     type="submit"
-                    className="mt-2 flex h-[53px] w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#8b3ce7] to-[#6746dc] text-[15px] font-bold text-white shadow-[0_12px_28px_rgba(112,67,218,0.22)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(112,67,218,0.28)] active:translate-y-0"
+                    className="mt-2 flex h-[53px] w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#f4539a] to-[#b33cda] text-[15px] font-bold text-white shadow-[0_12px_28px_rgba(218,74,157,0.22)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(218,74,157,0.30)] active:translate-y-0"
                 >
                     Kayıt Ol
                 </button>
             </form>
 
-            <p className="mt-6 text-center text-[14px] font-medium text-[#6f687d]">
+            <p className="mt-10 text-center text-sm text-[#8f899f]">
                 Zaten hesabın var mı?{" "}
                 <Link
                     to="/giris"
-                    className="font-bold text-[#7046d9] underline decoration-[#7046d9]/40 underline-offset-4 transition hover:text-[#572fc3]"
+                    className="font-semibold text-[#6d4aff]"
                 >
                     Giriş Yap
                 </Link>

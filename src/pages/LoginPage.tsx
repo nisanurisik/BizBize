@@ -27,7 +27,7 @@ export function LoginPage() {
                 <div className="relative grid w-full flex-1 grid-cols-1 items-center lg:grid-cols-[1fr_520px_1fr]">
                     <div className="hidden h-full items-center justify-center lg:flex">
                         <div className="-rotate-6 text-center">
-                            <p className="font-[cursive] text-[27px] font-semibold leading-[1.45] text-[#7355aa]">
+                            <p className="font-[cursive] text-[27px] font-semibold leading-[1.45] text-[#e84f9a]">
                                 Güzel
                                 <br />
                                 sorular,
@@ -39,7 +39,7 @@ export function LoginPage() {
 
                             <Heart
                                 size={34}
-                                className="mx-auto mt-4 text-[#7355aa]"
+                                className="mx-auto mt-4 text-[#e84f9a]"
                             />
                         </div>
                     </div>
