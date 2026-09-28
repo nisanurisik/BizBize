@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+ï»¿import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { MainLayout } from "@/layouts/MainLayout";
 import { AuthLayout } from "@/layouts/AuthLayout";
@@ -25,7 +25,7 @@ function App() {
                     />
                 </Route>
 
-                {/* Giriþ / Kayýt */}
+                {/* GiriÅŸ / KayÄ±t */}
                 <Route element={<AuthLayout />}>
                     <Route
                         path="/kayit"

@@ -1,6 +1,7 @@
-﻿import { Copy, Heart } from "lucide-react";
+﻿import { Heart } from "lucide-react";
 
 import stepRegister from "@/assets/images/how-it-works/step-register.png";
+import stepCode from "@/assets/images/how-it-works/step-code.png";
 import stepPartner from "@/assets/images/how-it-works/step-partner.png";
 import stepPlay from "@/assets/images/how-it-works/step-play.png";
 
@@ -17,16 +18,10 @@ const steps = [
                 hemen hesabını oluştur.
             </>
         ),
+        image: stepRegister,
         background: "bg-[#fff1f5]",
         numberBackground: "bg-[#ffc8dc]",
         numberColor: "text-[#c53f78]",
-        content: (
-            <img
-                src={stepRegister}
-                alt=""
-                className="mx-auto h-[180px] object-contain"
-            />
-        ),
     },
     {
         number: 2,
@@ -38,71 +33,10 @@ const steps = [
                 özel kodu partnerinle paylaş.
             </>
         ),
+        image: stepCode,
         background: "bg-[#f4efff]",
         numberBackground: "bg-[#d8c9ff]",
         numberColor: "text-[#3121a3]",
-        content: (
-            <div className="flex h-[180px] items-center justify-center">
-                <div
-                    className="
-                        w-[230px]
-                        -rotate-[3deg]
-                        rounded-[20px]
-                        bg-white
-                        px-6
-                        py-6
-                        shadow-[0_16px_40px_rgba(109,74,255,0.08)]
-                    "
-                >
-                    <p className="text-center text-[13px] font-semibold text-[#1d1854]">
-                        Sana Özel Kod
-                    </p>
-
-                    <div
-                        className="
-                            mt-3
-                            flex
-                            items-center
-                            overflow-hidden
-                            rounded-xl
-                            border-4
-                            border-[#f1eeff]
-                            bg-white
-                        "
-                    >
-                        <span
-                            className="
-                                flex-1
-                                py-2
-                                text-center
-                                text-[22px]
-                                font-black
-                                tracking-[0.08em]
-                                text-[#09064f]
-                            "
-                        >
-                            A7K3L9
-                        </span>
-
-                        <div
-                            className="
-                                flex
-                                h-11
-                                w-11
-                                items-center
-                                justify-center
-                                bg-[#6d4aff]
-                            "
-                        >
-                            <Copy
-                                size={19}
-                                className="text-white"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        ),
     },
     {
         number: 3,
@@ -116,42 +50,10 @@ const steps = [
                 sana bağlansın.
             </>
         ),
+        image: stepPartner,
         background: "bg-[#fff7eb]",
         numberBackground: "bg-[#ffe0ae]",
         numberColor: "text-[#db7900]",
-        content: (
-            <div className="relative">
-                <img
-                    src={stepPartner}
-                    alt=""
-                    className="mx-auto h-[180px] object-contain"
-                />
-
-                <div
-                    className="
-                        absolute
-                        left-[18%]
-                        top-[15%]
-                        flex
-                        h-12
-                        w-12
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-[#ff6a93]
-                        bg-white
-                    "
-                >
-                    <Heart
-                        size={22}
-                        fill="currentColor"
-                        strokeWidth={0}
-                        className="text-[#ff6a93]"
-                    />
-                </div>
-            </div>
-        ),
     },
     {
         number: 4,
@@ -165,30 +67,24 @@ const steps = [
                 birbirinizi daha iyi keşfedin.
             </>
         ),
+        image: stepPlay,
         background: "bg-[#fff0f5]",
         numberBackground: "bg-[#ffc5dc]",
         numberColor: "text-[#c84078]",
-        content: (
-            <img
-                src={stepPlay}
-                alt=""
-                className="mx-auto h-[180px] object-contain"
-            />
-        ),
     },
 ];
 
 export function HowItWorksSteps() {
     return (
-        <section className="bg-white py-5 lg:py-7">
+        <section className="bg-white pb-5 pt-4">
             <AppContainer>
-                {/* başlık */}
+                {/* BAŞLIK */}
                 <div className="text-center">
                     <div className="flex items-center justify-center gap-5">
                         <span
                             className="
                                 hidden
-                                rotate-[-18deg]
+                                -rotate-[18deg]
                                 text-[34px]
                                 font-black
                                 text-[#ff6ca5]
@@ -233,19 +129,19 @@ export function HowItWorksSteps() {
                         />
                     </div>
 
-                    <p className="mt-2 text-[16px] text-[#4c4771]">
+                    <p className="mt-1 text-[16px] text-[#4c4771]">
                         Partnerinizle birkaç adımda bağlantı kurun ve eğlenceli
                         oyunlara hemen başlayın.
                     </p>
                 </div>
 
-                {/* kartlar */}
+                {/* KARTLAR */}
                 <div
                     className="
                         relative
-                        mt-6
+                        mt-5
                         grid
-                        gap-5
+                        gap-7
                         md:grid-cols-2
                         xl:grid-cols-4
                     "
@@ -259,11 +155,12 @@ export function HowItWorksSteps() {
                                 overflow-visible
                                 rounded-[20px]
                                 px-5
-                                pb-7
+                                pb-6
                                 pt-4
                                 ${step.background}
                             `}
                         >
+                            {/* NUMARA */}
                             <div
                                 className={`
                                     absolute
@@ -271,12 +168,12 @@ export function HowItWorksSteps() {
                                     top-4
                                     z-20
                                     flex
-                                    h-[52px]
-                                    w-[52px]
+                                    h-[50px]
+                                    w-[50px]
                                     items-center
                                     justify-center
                                     rounded-full
-                                    text-[24px]
+                                    text-[23px]
                                     font-black
                                     ${step.numberBackground}
                                     ${step.numberColor}
@@ -285,9 +182,22 @@ export function HowItWorksSteps() {
                                 {step.number}
                             </div>
 
-                            <div>{step.content}</div>
+                            {/* GÖRSEL */}
+                            <div className="flex h-[185px] items-end justify-center">
+                                <img
+                                    src={step.image}
+                                    alt=""
+                                    className="
+                                        max-h-[180px]
+                                        max-w-full
+                                        object-contain
+                                        object-bottom
+                                    "
+                                />
+                            </div>
 
-                            <div className="mt-2 text-center">
+                            {/* METİNLER */}
+                            <div className="mt-1 text-center">
                                 <h3
                                     className="
                                         text-[20px]
@@ -301,9 +211,9 @@ export function HowItWorksSteps() {
 
                                 <p
                                     className="
-                                        mt-2
+                                        mt-1.5
                                         text-[15px]
-                                        leading-[1.5]
+                                        leading-[1.45]
                                         text-[#504b73]
                                     "
                                 >
@@ -311,16 +221,16 @@ export function HowItWorksSteps() {
                                 </p>
                             </div>
 
-                            {/* ok */}
+                            {/* KARTLAR ARASI OK */}
                             {index < steps.length - 1 && (
                                 <div
                                     className="
                                         absolute
-                                        -right-[34px]
-                                        top-[43%]
+                                        -right-[43px]
+                                        top-[42%]
                                         z-30
                                         hidden
-                                        w-[47px]
+                                        w-[58px]
                                         border-t-2
                                         border-dashed
                                         border-[#7854ff]

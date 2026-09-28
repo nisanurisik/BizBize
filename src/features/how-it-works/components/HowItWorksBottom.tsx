@@ -36,20 +36,20 @@ const benefits = [
 
 export function HowItWorksBottom() {
     return (
-        <section className="bg-white pb-8">
+        <section className="bg-white pb-7 pt-1">
             <AppContainer>
                 <div
                     className="
                         relative
                         overflow-hidden
-                        rounded-[24px]
+                        rounded-[22px]
                         bg-gradient-to-r
                         from-[#f5f1ff]
                         via-[#fcfaff]
                         to-[#f4efff]
-                        px-7
-                        py-7
-                        lg:px-14
+                        px-8
+                        py-6
+                        lg:px-12
                     "
                 >
                     <div
@@ -57,10 +57,10 @@ export function HowItWorksBottom() {
                             grid
                             items-center
                             gap-8
-                            lg:grid-cols-[40%_45%_15%]
+                            lg:grid-cols-[40%_43%_17%]
                         "
                     >
-                        {/* metin */}
+                        {/* SOL METİN */}
                         <div>
                             <div className="flex items-center gap-2">
                                 <h2
@@ -77,15 +77,16 @@ export function HowItWorksBottom() {
                                 <Heart
                                     size={24}
                                     className="text-[#ff669f]"
+                                    strokeWidth={2.3}
                                 />
                             </div>
 
                             <p
                                 className="
-                                    mt-2
+                                    mt-1
                                     max-w-[470px]
                                     text-[15px]
-                                    leading-[1.5]
+                                    leading-[1.45]
                                     text-[#514d76]
                                 "
                             >
@@ -96,7 +97,7 @@ export function HowItWorksBottom() {
                             </p>
                         </div>
 
-                        {/* özellikler */}
+                        {/* ÖZELLİKLER */}
                         <div className="grid gap-3 sm:grid-cols-2">
                             {benefits.map((benefit) => {
                                 const Icon = benefit.icon;
@@ -106,10 +107,11 @@ export function HowItWorksBottom() {
                                         key={benefit.label}
                                         className="
                                             flex
+                                            min-h-[52px]
                                             items-center
                                             gap-4
-                                            rounded-[16px]
-                                            bg-white/80
+                                            rounded-[15px]
+                                            bg-white/85
                                             px-3
                                             py-2
                                             shadow-[0_6px_20px_rgba(63,42,126,0.04)]
@@ -120,6 +122,7 @@ export function HowItWorksBottom() {
                                                 flex
                                                 h-10
                                                 w-12
+                                                shrink-0
                                                 items-center
                                                 justify-center
                                                 rounded-[12px]
@@ -138,7 +141,13 @@ export function HowItWorksBottom() {
                                             />
                                         </div>
 
-                                        <span className="text-[13px] font-medium text-[#59547a]">
+                                        <span
+                                            className="
+                                                text-[13px]
+                                                font-medium
+                                                text-[#59547a]
+                                            "
+                                        >
                                             {benefit.label}
                                         </span>
                                     </div>
@@ -146,7 +155,7 @@ export function HowItWorksBottom() {
                             })}
                         </div>
 
-                        {/* el yazısı */}
+                        {/* SAĞ EL YAZISI */}
                         <div
                             className="
                                 hidden

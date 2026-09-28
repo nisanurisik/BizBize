@@ -18,8 +18,8 @@ export function HomeHero() {
                     className="
                         absolute
                         right-[6%]
-                        top-[8%]
-                        h-[54%]
+                        top-[12%]
+                        h-[52%]
                         w-[45%]
                         rounded-[45%]
                         bg-[#f8f4ff]
@@ -59,13 +59,15 @@ export function HomeHero() {
                         min-h-0
                         flex-col
                         justify-between
-                        py-8
+                        pb-5
+                        pt-8
                     "
                 >
                     {/* ÜST ALAN */}
                     <div
                         className="
                             flex
+                            min-h-0
                             flex-1
                             items-center
                         "
@@ -139,16 +141,16 @@ export function HomeHero() {
                             </p>
                         </div>
                     </div>
-
                     {/* ALT ALAN */}
                     <div
                         className="
-                            flex
-                            shrink-0
-                            flex-col
-                            items-start
-                            gap-7
-                        "
+        flex
+        shrink-0
+        -translate-y-5
+        flex-col
+        items-start
+        gap-5
+    "
                     >
                         {/* HEMEN BAŞLA */}
                         <Link
@@ -250,6 +252,7 @@ export function HomeHero() {
                         relative
                         z-10
                         h-full
+                        min-h-0
                         min-w-0
                     "
                 >
@@ -258,7 +261,7 @@ export function HomeHero() {
                         className="
                             absolute
                             left-[17%]
-                            top-[8%]
+                            top-[13%]
                             z-20
                             -rotate-[7deg]
                             text-[#7653ef]
@@ -296,7 +299,7 @@ export function HomeHero() {
                         className="
                             absolute
                             right-[8%]
-                            top-[9%]
+                            top-[13%]
                             h-[clamp(65px,6vw,90px)]
                             w-[clamp(65px,6vw,90px)]
                             rotate-[10deg]
@@ -315,7 +318,7 @@ export function HomeHero() {
                             bottom-0
                             right-0
                             z-10
-                            h-[78%]
+                            h-[74%]
                             w-auto
                             max-w-none
                             object-contain
